@@ -1,6 +1,5 @@
 package com.example.servlet;
 
-import com.example.User;
 import com.example.Warehouse;
 
 import javax.servlet.ServletContext;
@@ -16,9 +15,9 @@ public class GetUsersServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("text/html");
-        ServletContext context=getServletContext();
-        context.setAttribute("users",Warehouse.getInstance().getUsers());
-        resp.sendRedirect(req.getContextPath());
+        ServletContext context = getServletContext();
+        context.setAttribute("users", Warehouse.getInstance().getUsers());
+//        resp.sendRedirect(req.getContextPath());
     }
     //write your code here!
 }
