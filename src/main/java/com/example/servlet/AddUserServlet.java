@@ -24,6 +24,6 @@ public class AddUserServlet  extends HttpServlet {
         resp.setContentType("text/html");
         ServletContext context=getServletContext();
         context.setAttribute("user",newUser);
-        resp.sendRedirect(req.getContextPath() + "/add");
+        resp.sendRedirect(req.getContextPath());
     }
 }

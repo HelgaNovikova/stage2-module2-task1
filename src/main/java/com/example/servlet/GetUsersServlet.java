@@ -18,7 +18,7 @@ public class GetUsersServlet extends HttpServlet {
         resp.setContentType("text/html");
         ServletContext context=getServletContext();
         context.setAttribute("users",Warehouse.getInstance().getUsers());
-        resp.sendRedirect(req.getContextPath() + "/users");
+        resp.sendRedirect(req.getContextPath());
     }
     //write your code here!
 }
