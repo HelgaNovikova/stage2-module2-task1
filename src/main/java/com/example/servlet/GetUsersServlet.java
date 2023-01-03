@@ -22,7 +22,7 @@ public class GetUsersServlet extends HttpServlet {
         resp.setContentType("text/html");
         ServletContext context=getServletContext();
         context.setAttribute("user",newUser);
-        resp.sendRedirect("/users");
+        resp.sendRedirect(req.getContextPath() + "/users");
     }
     //write your code here!
 }
